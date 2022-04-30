@@ -68,5 +68,16 @@
         <url-pattern>/saveUserServlet</url-pattern>
     </servlet-mapping>
 
+    <!-- RecmmendServlet -->
+    <servlet>
+        <servlet-name>recommendServlet</servlet-name>
+        <servlet-class>com.ahr.film.servlet.RecommendServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>recommendServlet</servlet-name>
+        <url-pattern>/recommendServlet</url-pattern>
+    </servlet-mapping>
+
 
 </web-app>
