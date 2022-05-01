@@ -107,7 +107,9 @@ public class MySQLUtils extends MySQLBaseUtils{
                 }
                 field.setAccessible(true);
                 try {
-                    field.set(t1, value);
+                    if(field.getType().toString().equals("class java.lang.Integer")){
+                        field.set(t1, Integer.parseInt(value.toString()));
+                    }else field.set(t1, value);
                 } catch (IllegalAccessException e) {
                     e.printStackTrace();
                 }

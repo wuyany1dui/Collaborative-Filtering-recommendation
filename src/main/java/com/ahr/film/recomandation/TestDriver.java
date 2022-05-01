@@ -16,15 +16,6 @@ import static java.lang.System.out;
 
 public class TestDriver {
     public static void main(String[] args) {
-        Connection conn = MySQLUtils.getConnection(StringValues.MYSQL_URL, StringValues.PASSWORD, StringValues.USERNAME, StringValues.DRIVER_NAME);
-        List<Film> filmList = MySQLUtils.doQuery(conn, Film.class);
-        JSONArray arr = new JSONArray();
-        if(Objects.nonNull(filmList)){
-            for(Film f : filmList){
-                arr.add(JSONObject.parseObject(f.toString()));
-            }
-        }
 
-        out.println(arr.toString());
     }
 }
