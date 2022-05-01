@@ -2,6 +2,7 @@ package com.ahr.film.servlet;
 
 import com.ahr.film.entity.User;
 import com.ahr.film.exception.NullFieldException;
+import com.ahr.film.exception.NullPrimaryKeyException;
 import com.ahr.film.mysql.MySQLUtils;
 import com.ahr.film.mysql.StringValues;
 import com.alibaba.fastjson.JSONObject;
@@ -25,7 +26,7 @@ public class SaveUserServlet extends HttpServlet {
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         ServletUtils.setCharSet(req, resp);
         User u = new User();
-
+        u.setUserId(Integer.parseInt(req.getParameter("userId")));
         u.setUserAccount(req.getParameter("userAccount"));
         u.setUserPassword(req.getParameter("userPassword"));
         u.setUserName(req.getParameter("userName"));
@@ -35,7 +36,7 @@ public class SaveUserServlet extends HttpServlet {
         Connection conn = MySQLUtils.getConnection(StringValues.MYSQL_URL, StringValues.PASSWORD, StringValues.USERNAME, StringValues.DRIVER_NAME);
         PrintWriter out = resp.getWriter();
         try {
-            if(MySQLUtils.doInsert(conn, u) > 0){
+            if(MySQLUtils.doUpdate(conn, u) > 0){
                 out.println(new JSONObject().put("status", "success"));
             }else{
                 out.println(new JSONObject().put("status", "failed"));
@@ -43,6 +44,8 @@ public class SaveUserServlet extends HttpServlet {
         } catch (NullFieldException e) {
             e.printStackTrace();
         } catch (SQLException e) {
+            e.printStackTrace();
+        } catch (NullPrimaryKeyException e) {
             e.printStackTrace();
         }
     }
