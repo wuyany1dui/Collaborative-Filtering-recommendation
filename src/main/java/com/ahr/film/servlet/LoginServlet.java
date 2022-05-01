@@ -25,11 +25,11 @@ public class LoginServlet extends HttpServlet {
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         ServletUtils.setCharSet(req, resp);
         PrintWriter out = resp.getWriter();
-        Integer userId = Integer.parseInt(req.getParameter("userId"));
+        String userAccount = req.getParameter("userAccount");
         String userPassword = req.getParameter("userPassword");
         JSONObject obj = new JSONObject();
         User user = new User();
-        user.setUserId(userId);
+        user.setUserAccount(userAccount);
         Connection conn = MySQLUtils.getConnection(StringValues.MYSQL_URL, StringValues.PASSWORD, StringValues.USERNAME, StringValues.DRIVER_NAME);
         List<User> loginUser = MySQLUtils.doQuery(conn, user);
         if(loginUser.size() != 1){

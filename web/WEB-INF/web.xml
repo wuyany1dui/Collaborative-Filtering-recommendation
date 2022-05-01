@@ -32,7 +32,7 @@
 
     <servlet-mapping>
         <servlet-name>loginServlet</servlet-name>
-        <url-pattern>/LoginServlet</url-pattern>
+        <url-pattern>/loginServlet</url-pattern>
     </servlet-mapping>
 
     <!-- MainActivityServlet -->

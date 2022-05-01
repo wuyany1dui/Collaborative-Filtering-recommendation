@@ -5,7 +5,6 @@ import com.ahr.film.entity.FilmScore;
 import com.ahr.film.mysql.MySQLUtils;
 import com.ahr.film.mysql.StringValues;
 import com.alibaba.fastjson.JSONArray;
-import com.alibaba.fastjson.JSONObject;
 import jakarta.servlet.*;
 import jakarta.servlet.http.*;
 import jakarta.servlet.annotation.*;

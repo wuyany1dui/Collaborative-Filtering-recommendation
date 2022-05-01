@@ -3,7 +3,6 @@ package com.ahr.film.servlet;
 import com.ahr.film.entity.Film;
 import com.ahr.film.mysql.MySQLUtils;
 import com.ahr.film.mysql.StringValues;
-import com.alibaba.fastjson.JSON;
 import com.alibaba.fastjson.JSONArray;
 import com.alibaba.fastjson.JSONObject;
 import jakarta.servlet.*;

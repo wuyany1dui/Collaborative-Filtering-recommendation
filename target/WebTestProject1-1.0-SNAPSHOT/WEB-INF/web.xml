@@ -3,6 +3,7 @@
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd"
          version="4.0">
+    <!-- TestServlet -->
     <servlet>
         <servlet-name>testServlet</servlet-name>
         <servlet-class>com.ahr.film.servlet.TestServlet</servlet-class>
@@ -12,5 +13,71 @@
         <servlet-name>testServlet</servlet-name>
         <url-pattern>/testServlet</url-pattern>
     </servlet-mapping>
+    <!-- GetFavorFilmServlet -->
+    <servlet>
+        <servlet-name>getFavorFilmServlet</servlet-name>
+        <servlet-class>com.ahr.film.servlet.GetFavorFilmServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>getFavorFilmServlet</servlet-name>
+        <url-pattern>/getFavorFilmServlet</url-pattern>
+    </servlet-mapping>
+
+    <!-- LoginServlet -->
+    <servlet>
+        <servlet-name>loginServlet</servlet-name>
+        <servlet-class>com.ahr.film.servlet.LoginServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>loginServlet</servlet-name>
+        <url-pattern>/loginServlet</url-pattern>
+    </servlet-mapping>
+
+    <!-- MainActivityServlet -->
+    <servlet>
+        <servlet-name>mainActivityServlet</servlet-name>
+        <servlet-class>com.ahr.film.servlet.MainActivityServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>mainActivityServlet</servlet-name>
+        <url-pattern>/mainActivityServlet</url-pattern>
+    </servlet-mapping>
+
+    <!-- RegisterUserServlet -->
+    <servlet>
+        <servlet-name>registerUserServlet</servlet-name>
+        <servlet-class>com.ahr.film.servlet.RegisterUserServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>registerUserServlet</servlet-name>
+        <url-pattern>/registerUserServlet</url-pattern>
+    </servlet-mapping>
+
+    <!-- SaveUserServlet -->
+    <servlet>
+        <servlet-name>saveUserServlet</servlet-name>
+        <servlet-class>com.ahr.film.servlet.SaveUserServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>saveUserServlet</servlet-name>
+        <url-pattern>/saveUserServlet</url-pattern>
+    </servlet-mapping>
+
+    <!-- RecmmendServlet -->
+    <servlet>
+        <servlet-name>recommendServlet</servlet-name>
+        <servlet-class>com.ahr.film.servlet.RecommendServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>recommendServlet</servlet-name>
+        <url-pattern>/recommendServlet</url-pattern>
+    </servlet-mapping>
+
 
 </web-app>
