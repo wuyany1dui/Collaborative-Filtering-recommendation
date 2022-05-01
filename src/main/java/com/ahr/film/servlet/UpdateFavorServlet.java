@@ -38,6 +38,7 @@ public class UpdateFavorServlet extends HttpServlet {
                 e.printStackTrace();
             }
         }else if(action.equals("update")){
+            filmScore.setFilmScoreId(Integer.parseInt(request.getParameter("filmScoreId")));
             filmScore.setUserId(Integer.parseInt(request.getParameter("userId")));
             filmScore.setFilmId(Integer.parseInt(request.getParameter("filmId")));
             filmScore.setFilmScore(Integer.parseInt(request.getParameter("filmScore")));

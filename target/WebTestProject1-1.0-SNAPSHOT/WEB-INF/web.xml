@@ -79,5 +79,15 @@
         <url-pattern>/recommendServlet</url-pattern>
     </servlet-mapping>
 
+    <!-- UpdateFavorServlet -->
+    <servlet>
+        <servlet-name>updateFavorServlet</servlet-name>
+        <servlet-class>com.ahr.film.servlet.UpdateFavorServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>updateFavorServlet</servlet-name>
+        <url-pattern>/updateFavorServlet</url-pattern>
+    </servlet-mapping>
 
 </web-app>

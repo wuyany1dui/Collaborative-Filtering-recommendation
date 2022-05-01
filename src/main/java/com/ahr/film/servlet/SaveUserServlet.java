@@ -19,7 +19,7 @@ import java.sql.SQLException;
 public class SaveUserServlet extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        this.doGet(req, resp);
+        this.doPost(req, resp);
     }
 
     @Override
@@ -37,9 +37,13 @@ public class SaveUserServlet extends HttpServlet {
         PrintWriter out = resp.getWriter();
         try {
             if(MySQLUtils.doUpdate(conn, u) > 0){
-                out.println(new JSONObject().put("status", "success"));
+                JSONObject o = new JSONObject();
+                o.put("status", "success");
+                out.println(o.toString());
             }else{
-                out.println(new JSONObject().put("status", "failed"));
+                JSONObject o = new JSONObject();
+                o.put("status", "failed");
+                out.println(o.toString());
             }
         } catch (NullFieldException e) {
             e.printStackTrace();

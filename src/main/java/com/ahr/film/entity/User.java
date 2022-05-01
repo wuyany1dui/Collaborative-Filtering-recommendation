@@ -1,5 +1,6 @@
 package com.ahr.film.entity;
 
+import com.ahr.film.annotation.PrimaryKey;
 import com.alibaba.fastjson.JSONObject;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
@@ -7,6 +8,7 @@ import lombok.EqualsAndHashCode;
 @Data
 @EqualsAndHashCode
 public class User {
+    @PrimaryKey
     private Integer userId;
     private String userName;
     private String userPassword;
