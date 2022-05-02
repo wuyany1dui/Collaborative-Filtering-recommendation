@@ -12,15 +12,13 @@ import java.util.*;
 
 public class Recommendation {
 
-    public static List<Film> getRecommendFilmList(User user){
-        List<Film> filmList = new ArrayList<>();
-        Map<Integer, Map<Integer, Integer>> map = new HashMap<>(); //存放推荐电影相关内容
-
-
+    public List<Film> getRecommendFilmList(User user){
+        List<Film> filmList;
+        filmList = this.recommend(user);
         return filmList;
     }
 
-    public static List<Film> recommend(User u){
+    public List<Film> recommend(User u){
         Connection conn = MySQLUtils.getConnection(StringValues.MYSQL_URL, StringValues.PASSWORD, StringValues.USERNAME, StringValues.DRIVER_NAME);
 
 

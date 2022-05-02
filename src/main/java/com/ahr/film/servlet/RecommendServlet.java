@@ -23,7 +23,7 @@ public class RecommendServlet extends HttpServlet {
         ServletUtils.setCharSet(request, response);
         User u = new User();
         u.setUserId(Integer.parseInt(request.getParameter("userId")));
-        List<Film> filmList = Recommendation.getRecommendFilmList(u);
+        List<Film> filmList = new Recommendation().getRecommendFilmList(u);
         JSONArray arr = new JSONArray();
         for(Film f : filmList){
             arr.add(f.toString());
