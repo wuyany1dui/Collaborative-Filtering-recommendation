@@ -1,6 +1,7 @@
 package com.ahr.film.mysql;
 
 
+import com.ahr.film.annotation.SkipInit;
 import com.ahr.film.exception.NullFieldException;
 import com.ahr.film.exception.NullPrimaryKeyException;
 

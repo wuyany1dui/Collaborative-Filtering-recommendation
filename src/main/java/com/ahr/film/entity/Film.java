@@ -17,6 +17,7 @@ public class Film {
     private String filmPoster;
     private Date filmPublished;
     private String filmPath;
+    private Double w;
 
     @Override
     public String toString(){
