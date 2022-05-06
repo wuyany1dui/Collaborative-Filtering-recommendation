@@ -36,6 +36,8 @@ public class MainActivityServlet extends HttpServlet {
         PrintWriter out = response.getWriter();
 
         out.println(arr.toString());
+        out.flush();
+        out.close();
         return;
     }
 }

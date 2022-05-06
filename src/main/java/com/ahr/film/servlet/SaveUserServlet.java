@@ -27,8 +27,6 @@ public class SaveUserServlet extends HttpServlet {
         ServletUtils.setCharSet(req, resp);
         User u = new User();
         u.setUserId(Integer.parseInt(req.getParameter("userId")));
-        u.setUserAccount(req.getParameter("userAccount"));
-        u.setUserPassword(req.getParameter("userPassword"));
         u.setUserName(req.getParameter("userName"));
         u.setUserTelephone(req.getParameter("userTelephone"));
         u.setUserGender(Integer.parseInt(req.getParameter("userGender")));

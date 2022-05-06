@@ -36,9 +36,15 @@ public class RegisterUserServlet extends HttpServlet {
         PrintWriter out = response.getWriter();
         try {
             if(MySQLUtils.doInsert(conn, u) > 0){
-                out.println(new JSONObject().put("status", "success"));
+                JSONObject obj = new JSONObject();
+                obj.put("status", "success");
+                out.println(obj.toString());
+                out.flush();
             }else{
-                out.println(new JSONObject().put("status", "failed"));
+                JSONObject obj = new JSONObject();
+                obj.put("status", "failed");
+                out.println(obj.toString());
+                out.flush();
             }
         } catch (NullFieldException e) {
             e.printStackTrace();

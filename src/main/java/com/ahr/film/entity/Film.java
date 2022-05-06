@@ -27,7 +27,8 @@ public class Film {
         obj.put("filmFeature", filmFeature);
         obj.put("filmPoster", filmPoster);
         obj.put("filmPublished", filmPublished.toString());
-        obj.put("filmPath", filmPath);
+        obj.put("path", filmPath);
+        obj.put("filmName", filmName);
         return obj.toString();
     }
 }

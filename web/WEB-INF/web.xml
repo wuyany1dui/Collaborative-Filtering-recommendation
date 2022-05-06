@@ -90,4 +90,14 @@
         <url-pattern>/updateFavorServlet</url-pattern>
     </servlet-mapping>
 
+    <!-- LoginServlet -->
+    <servlet>
+        <servlet-name>findPwdServlet</servlet-name>
+        <servlet-class>com.ahr.film.servlet.FindPasswordServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>findPwdServlet</servlet-name>
+        <url-pattern>/findPwdServlet</url-pattern>
+    </servlet-mapping>
+
 </web-app>
