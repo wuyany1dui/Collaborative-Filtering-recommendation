@@ -1,5 +1,7 @@
 package com.ahr.film.entity;
 
+import com.ahr.film.annotation.SkipInit;
+import com.ahr.film.annotation.SkipStorage;
 import com.alibaba.fastjson.JSONObject;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
@@ -17,6 +19,8 @@ public class Film {
     private String filmPoster;
     private Date filmPublished;
     private String filmPath;
+    @SkipInit
+    @SkipStorage
     private Double w;
 
     @Override

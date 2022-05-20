@@ -28,6 +28,6 @@ public class RecommendServlet extends HttpServlet {
         for(Film f : filmList){
             arr.add(f.toString());
         }
-        response.getWriter().println(arr);
+        response.getWriter().println(arr.toString());
     }
 }

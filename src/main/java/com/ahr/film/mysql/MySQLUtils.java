@@ -48,7 +48,8 @@ public class MySQLUtils extends MySQLBaseUtils{
 
         ResultSet rs = null;
         try {
-            rs = select(conn, sqlFactory.getSelectSql(t));
+            String sql = sqlFactory.getSelectSql(t);
+            rs = select(conn, sql);
         } catch (SQLException e) {
             e.printStackTrace();
         }

@@ -1,5 +1,6 @@
 package com.ahr.film.entity;
 
+import com.ahr.film.annotation.PrimaryKey;
 import com.alibaba.fastjson.JSONObject;
 import com.sun.jdi.IntegerType;
 import lombok.Data;
@@ -8,6 +9,7 @@ import lombok.EqualsAndHashCode;
 @Data
 @EqualsAndHashCode
 public class FilmScore{
+    @PrimaryKey
     private Integer filmScoreId;
     private Integer filmId;
     private Integer userId;

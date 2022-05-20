@@ -3,6 +3,7 @@ package com.ahr.film.mysql;
 
 
 import com.ahr.film.annotation.PrimaryKey;
+import com.ahr.film.annotation.SkipInit;
 import com.ahr.film.annotation.SkipStorage;
 import com.ahr.film.exception.NullFieldException;
 import com.ahr.film.exception.NullPrimaryKeyException;
@@ -40,7 +41,10 @@ public class SqlFactory {
                 for(int j = 0; j < fields.size(); j++){
                     Field f = fields.get(j);
                     String name = f.getName();
-
+                    SkipInit si = f.getAnnotation(SkipInit.class);
+                    if(si != null){
+                        continue;
+                    }
                     name = name.substring(0, 1).toUpperCase() + name.substring(1);
                     String type = f.getGenericType().toString();
                     Method m = tClass.getMethod("get" + name);

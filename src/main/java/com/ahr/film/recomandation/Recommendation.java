@@ -82,7 +82,7 @@ public class Recommendation {
         FilmScore filmScore = new FilmScore();
         filmScore.setUserId(u.getUserId());
         List<FilmScore> filmScores = MySQLUtils.doQuery(conn, filmScore);
-        boolean[] used = new boolean[allFilm.size()];
+        boolean[] used = new boolean[allFilm.size() + 5];
         for(FilmScore fs : filmScores){
             int Nij = 0;
             Double Wij;

@@ -100,4 +100,23 @@
         <url-pattern>/findPwdServlet</url-pattern>
     </servlet-mapping>
 
+    <!-- banUserServlet -->
+    <servlet>
+        <servlet-name>banUserServlet</servlet-name>
+        <servlet-class>com.ahr.film.servlet.BanUserServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>banUserServlet</servlet-name>
+        <url-pattern>/banUserServlet</url-pattern>
+    </servlet-mapping>
+
+    <!-- getAllUserServlet -->
+    <servlet>
+        <servlet-name>getAllUserServlet</servlet-name>
+        <servlet-class>com.ahr.film.servlet.GetAllUserServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>getAllUserServlet</servlet-name>
+        <url-pattern>/getAllUserServlet</url-pattern>
+    </servlet-mapping>
 </web-app>
